@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html class=''>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/JS_Assignments.css">
+</head>
+<body>
+
+<div class = "container">
+
+  <div class="well well-sm box-shadow-demo">
+      <h3 class="text-center text-info">Javascript Assignments - Solved!</h3>
+  </div>
+  
+  <div class="panel-group" id="accordion">
+    
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a class="colpsible-panel collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                    Assignment 01 :: <b>Anagrams</b>
+                </a>
+            </h4>
+        </div>
+        <div id="collapseOne" class="panel-collapse collapse">
+            <div class="panel-body">
+                <h4><b>Anagrams</b></h4>
+                <blockquote>
+                    Return 'TRUE' or 'FALSE' after checking if the strings entered by the user are ANAGRAMS of eachother. 
+                    One string is an anagram of another if it uses the same set of characters in the same quantity. 
+                    Only consider characters, not spaces or punctuation.
+                    Consider capital letters to be the same as lower case.
+                </blockquote>
+                <div class="panel-group">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                        <h6 class="panel-title">
+                            <a data-toggle="collapse" href="#collapse1"><b>Test Case Values</b></a>
+                        </h6>
+                        </div>
+                        <div id="collapse1" class="panel-collapse collapse">
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <div class="row">
+                                    <div class="col-sm-3"><u>String 1</u></div>
+                                    <div class="col-sm-3"><u>String 2</u></div>
+                                    <div class="col-sm-6">
+                                        <u>Expected Output & Description</u>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="row">
+                                    <div class="col-sm-3">School Master</div>
+                                    <div class="col-sm-3">The Classroom</div>
+                                    <div class="col-sm-6">
+                                        Expected Output :: TRUE
+                                        <br>//The positive test case
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="row">
+                                    <div class="col-sm-3">School Master!!</div>
+                                    <div class="col-sm-3">The Class-Room</div>
+                                    <div class="col-sm-6">
+                                        Expected Output :: TRUE
+                                        <br>//To test the ignorance of special characters 
+                                        & ignorance of case-sensitiveness
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="row">
+                                    <div class="col-sm-3">School Master</div>
+                                    <div class="col-sm-3">The Clasrooom</div>
+                                    <div class="col-sm-6">
+                                        Expected Output :: FALSE
+                                        <br>//To test the match of number of occurances of characters. 
+                                        Specially observe & compare 's' and 'o' occurances
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="row">
+                                    <div class="col-sm-3">rail safety</div>
+                                    <div class="col-sm-3">fairy tales</div>
+                                    <div class="col-sm-6">
+                                        Expected Output :: TRUE
+                                        <br>//The positive test case
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="row">
+                                    <div class="col-sm-3">RAIL! SAFETY!</div>
+                                    <div class="col-sm-3">fairy tales</div>
+                                    <div class="col-sm-6">
+                                        Expected Output :: TRUE
+                                        <br>//To test the ignorance of special characters 
+                                        & ignorance of case-sensitiveness
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="row">
+                                    <div class="col-sm-3">Hi there</div>
+                                    <div class="col-sm-3">Bye there</div>
+                                    <div class="col-sm-6">
+                                        Expected Output :: FALSE
+                                        <br>//To test mis-match of characters
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+                <h5><b>Enter two strings : </b></h5>
+                <form name="form_assignment_01">
+                    <div class="input-group">
+                        <span class="input-group-addon">String 1 :</span>
+                        <input id="asgn_str_01" type="text" class="form-control" name="asgn_str_01" placeholder="Enter String 1">
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon">String 2 :</span>
+                        <input id="asgn_str_02" type="text" class="form-control" name="asgn_str_02" placeholder="Enter String 2">
+                    </div>
+                    <div class="text-center">
+                        <pre id="asgn_response" style="visibility:hidden;"></pre>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary" id="asgn_01_sbmt">Submit</button>
+                        <button type="reset" class="btn btn-primary" id="asgn_01_reset">Reset</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel panel-warning">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a class="colpsible-panel collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                    Assignment 02 :: <b>Array Chunks</b>
+                </a>
+            </h4>
+        </div>
+        <div id="collapseTwo" class="panel-collapse collapse">
+            <div class="panel-body">
+                    
+                <h4><b>Array Chunks</b></h4>
+                <blockquote>
+                    For given array and chunk size, divide the array into many subarrays where each subarray is of length chunk size.
+                </blockquote>
+                <div class="panel-group">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                        <h6 class="panel-title">
+                            <a data-toggle="collapse" href="#collapse2"><b>Test Case Values</b></a>
+                        </h6>
+                        </div>
+                        <div id="collapse2" class="panel-collapse collapse">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    chunk([1, 2, 3, 4], 2) === [[ 1, 2], [3, 4]]
+                                </li>
+                                <li class="list-group-item">
+                                    chunk([1, 2, 3, 4, 5], 2) === [[ 1, 2], [3, 4], [5]]
+                                </li>
+                                <li class="list-group-item">
+                                    chunk([1, 2, 3, 4, 5, 6, 7, 8], 3) === [[ 1, 2, 3], [4, 5, 6], [7, 8]]
+                                </li>
+                                <li class="list-group-item">
+                                    chunk([1, 2, 3, 4, 5], 4) === [[ 1, 2, 3, 4], [5]]
+                                </li>
+                                <li class="list-group-item">
+                                    chunk([1, 2, 3, 4, 5], 10) === [[ 1, 2, 3, 4, 5]]
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <h5><b>Enter Array & Chunk Size : </b></h5>
+                <form name="form_assignment_02">
+                    <div class="input-group">
+                        <span class="input-group-addon">Array :</span>
+                        <input id="asgn_02_str_01" type="text" class="form-control" name="asgn_02_str_01" placeholder="Enter Array of comma seperated elements. Ex : 1, 2, 3, 4, 5">
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon">Chunk Size :</span>
+                        <input id="asgn_02_str_02" type="text" class="form-control" name="asgn_02_str_02" placeholder="Enter Chunk number. Ex : 2">
+                    </div>
+                    <div class="text-center">
+                        <pre id="asgn_02_response" style="visibility:hidden;"></pre>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary" id="asgn_02_sbmt">Submit</button>
+                        <button type="reset" class="btn btn-primary" id="asgn_02_reset">Reset</button>
+                    </div>
+                </form>
+                    
+            </div>
+        </div>
+    </div>
+
+    <div class="panel panel-success">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a class="colpsible-panel collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                    Assignment 03 :: <b>Capitalize</b>
+                </a>
+            </h4>
+        </div>
+        <div id="collapseThree" class="panel-collapse collapse">
+            <div class="panel-body">
+                <h4><b>Capitalize</b></h4>
+                <blockquote>
+                    Write a function that accepts a string. 
+                    The function should capitalize the first letter of each word in the string then return the capitalized string.
+                </blockquote>
+                <div class="panel-group">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                        <h6 class="panel-title">
+                            <a data-toggle="collapse" href="#collapse3"><b>Test Case Values</b></a>
+                        </h6>
+                        </div>
+                        <div id="collapse3" class="panel-collapse collapse">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    capitalize('a short sentence') === 'A Short Sentence'
+                                </li>
+                                <li class="list-group-item">
+                                    capitalize('a lazy fox') === 'A Lazy Fox'
+                                </li>
+                                <li class="list-group-item">
+                                    capitalize('look, it is working!') === 'Look, It Is Working!'
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <h5><b>Enter a sentence/phrase : </b></h5>
+                <form name="form_assignment_03">
+                    <div class="input-group">
+                        <span class="input-group-addon">>></span>
+                        <input id="asgn_03_str_01" type="text" class="form-control" name="asgn_03_str_01" placeholder="Enter a sentence/phrase to be capitalized.">
+                    </div>
+                    <div class="text-center">
+                        <pre id="asgn_03_response" style="visibility:hidden;"></pre>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary" id="asgn_03_sbmt">Submit</button>
+                        <button type="reset" class="btn btn-primary" id="asgn_03_reset">Reset</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel panel-danger">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a class="colpsible-panel collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+                    Assignment 04 :: <b>Fibonacci series</b>
+                </a>
+            </h4>
+        </div>
+        <div id="collapseFour" class="panel-collapse collapse">
+            <div class="panel-body">
+                <h4><b>Fibonacci series</b></h4>
+                <blockquote>
+                    Write a function that prints the n-th entry in the fibonacci series. 
+                    The fibonacci series is an ordering of numbers where each number is the sum of its preceeding two numbers.
+                </blockquote>
+                <div class="panel-group">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                        <h6 class="panel-title">
+                            <a data-toggle="collapse" href="#collapse4"><b>Test Case Values</b></a>
+                        </h6>
+                        </div>
+                        <div id="collapse4" class="panel-collapse collapse">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    Example sequence: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+                                </li>
+                                <li class="list-group-item">
+                                    fib(4) === 3
+                                </li>
+                                <li class="list-group-item">
+                                    fib(15) === 610
+                                </li>
+                                <li class="list-group-item">
+                                    fib(102) === 927372692193082100000
+                                </li>
+                                <li class="list-group-item">
+                                    fib(103) === 1.5005205362069012e+21
+                                </li>
+                                <li class="list-group-item">
+                                    fib(1474) === 4.992254605478015e+307
+                                </li>
+                                <li class="list-group-item">
+                                    fib(1475) === Infinity
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <h5><b>Enter an index position number of the Fibonacci series : </b></h5>
+                <div class="short-note">
+                    [Note : Ofcourse a valid number here would be more than 0
+                    <br>For any index number more than 102, you may get an exponential value as result.
+                    <br>For any index number greater than 1475, you may get 'infinity' as result.]
+                </div>
+                <div>&nbsp;</div>
+                <form name="form_assignment_04">
+                    <div class="input-group">
+                        <span class="input-group-addon">Index Number : </span>
+                        <input id="asgn_04_str_01" type="text" class="form-control" name="asgn_04_str_01" placeholder="Enter a valid index position number of the Fibonacci series">
+                    </div>
+                    <div class="text-center">
+                        <pre id="asgn_04_response" style="visibility:hidden;"></pre>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary" id="asgn_04_sbmt">Submit</button>
+                        <button type="reset" class="btn btn-primary" id="asgn_04_reset">Reset</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a class="colpsible-panel collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive">
+                    Assignment 05 :: <b>Fizz Buzz</b>
+                </a>
+            </h4>
+        </div>
+        <div id="collapseFive" class="panel-collapse collapse">
+            <div class="panel-body">
+                <h4><b>Fizz Buzz</b></h4>
+                <blockquote>
+                    Write a program that console logs the numbers from 1 to n. 
+                    <br>But for multiples of three print “fizz” instead of the number 
+                    <br>and for the multiples of five prints “buzz”. 
+                    <br>For numbers which are multiples of both three and five print “fizzbuzz”.
+                </blockquote>
+                <div class="panel-group">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h6 class="panel-title">
+                                <a data-toggle="collapse" href="#collapse5"><b>Test Case Values</b></a>
+                            </h6>
+                        </div>
+                        <div id="collapse5" class="panel-collapse collapse">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    1 ===> console.log(1)
+                                </li>
+                                <li class="list-group-item">
+                                    2 ===> console.log(2)
+                                </li>
+                                <li class="list-group-item">
+                                    3 ===> console.log('fizz')
+                                </li>
+                                <li class="list-group-item">
+                                    4 ===> console.log(4)
+                                </li>
+                                <li class="list-group-item">
+                                    5 ===> console.log('buzz')
+                                </li>
+                                <li class="list-group-item">
+                                    ...... 15 ===> console.log('fizzBuzz');
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <h5><b>Enter a closing/ending number : </b></h5>
+                <div class="short-note">
+                    [Enter the number upto which you want Fizz-Buzz to print]
+                </div>
+                <div>&nbsp;</div>
+                <form name="form_assignment_05">
+                    <div class="input-group">
+                        <span class="input-group-addon">>></span>
+                        <input id="asgn_05_str_01" type="text" class="form-control" name="asgn_05_str_01" placeholder="Enter a closing/ending number upto which you want Fizz-Buzz to print.">
+                    </div>
+                    <div class="text-center">
+                        <pre id="asgn_05_response" style="visibility:hidden;">
+                            <!--Table (generated by javascript file) would append here -->
+                        </pre>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary" id="asgn_05_sbmt">Submit</button>
+                        <button type="reset" class="btn btn-primary" id="asgn_05_reset">Reset</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel panel-warning">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a class="colpsible-panel collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSix">
+                    Assignment 06 :: <b>Palindrome</b>
+                </a>
+            </h4>
+        </div>
+        <div id="collapseSix" class="panel-collapse collapse">
+            <div class="panel-body">
+                Under Construction! Sorry for the inconvenience ;)
+            </div>
+        </div>
+    </div>
+    
+    <div class="panel panel-success">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a class="colpsible-panel collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven">
+                    Assignment 07 :: <b>Vowels</b>
+                </a>
+            </h4>
+        </div>
+        <div id="collapseSeven" class="panel-collapse collapse">
+            <div class="panel-body">
+                Under Construction! Sorry for the inconvenience ;)
+            </div>
+        </div>
+    </div>
+
+    <div class="panel panel-danger">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a class="colpsible-panel collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseEight">
+                    Assignment 08 :: <b>Reverse String</b>
+                </a>
+            </h4>
+        </div>
+        <div id="collapseEight" class="panel-collapse collapse">
+            <div class="panel-body">
+                Under Construction! Sorry for the inconvenience ;)
+            </div>
+        </div>
+    </div>
+  
+</div>
+  
+  
+</div> <!-- end container -->
+
+<script src="../JavaScript/JS_assignments.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</body>
+</html>
+

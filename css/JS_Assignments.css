@@ -1,0 +1,58 @@
+body{
+
+    padding: 30px;
+
+}
+ 
+.panel-heading .colpsible-panel:after {
+ 
+    font-family: 'Glyphicons Halflings';
+ 
+    content: "\e114";   
+ 
+    float: right;       
+ 
+    color: #408080;        
+ 
+}
+ 
+.panel-heading .colpsible-panel.collapsed:after {
+ 
+    content: "\e080";
+ 
+}  
+
+.well {
+
+    color: rgb(0, 11, 110);
+
+    background-color: rgb(140, 200, 255)
+
+} 
+
+
+.box-shadow-demo {
+
+    box-shadow: 10px 10px 15px #92A5DE;
+    /* box-shadow: 10px 10px 15px rgb(94, 95, 95); */
+ 
+}
+
+li {
+    
+    list-style-type: none;
+
+}
+
+blockquote {
+
+    font-size: medium;
+
+}
+
+.short-note {
+
+    font-size:14px; 
+    
+    color: #959595;
+}
