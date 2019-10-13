@@ -344,10 +344,10 @@ function countVowels() {
     // const vowelsinstr = strVowel.match(/[aeiou]/g);
     // const vowelCount= vowelsinstr.length;
     // document.getElementById('asgn_07_response').innerText = "The number of vowels in the given string :: " + vowelCount;
+    // document.getElementById('asgn_07_response').style.display ="block";
     
     const countVowels = str => Array.from(str).filter(letter => 'aeiou'.includes(letter)).length;
     document.getElementById('asgn_07_response').innerText = "The number of vowels in the given string :: " + countVowels(strVowel);
-
     document.getElementById('asgn_07_response').style.display ="block";
     
 }
