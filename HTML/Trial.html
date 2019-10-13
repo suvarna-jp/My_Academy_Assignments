@@ -1,0 +1,574 @@
+<html>
+    <head>
+        <!-- Check Out This page :: https://demos.creative-tim.com/paper-dashboard-angular/#/dashboard -->
+    <meta charset="utf-8">
+    <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./assets/img/favicon.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta name="viewport" content="width=device-width">
+
+    <title>Paper Dashboard Angular by Creative Tim</title>
+
+    <base href="https://demos.creative-tim.com/paper-dashboard-angular/">
+	<!-- Canonical SEO -->
+    <link rel="canonical" href="https://www.creative-tim.com/product/paper-dashboard-angular">
+
+    <!--  Social tags      -->
+    <meta name="keywords" content="bootstrap dashboard angular, creative tim, html dashboard angular, html css dashboard, web dashboard angular, paper design, bootstrap dashboard angular, bootstrap, css3 dashboard angular, bootstrap admin, paper bootstrap dashboard angular, frontend, responsive bootstrap dashboard angular">
+
+    <meta name="description" content="Paper Dashboard Angular is a beautiful Bootstrap Admin Panel for your next project.">
+
+    <!-- Schema.org markup for Google+ -->
+    <meta itemprop="name" content="Paper Dashboard Angular by Creative Tim">
+    <meta itemprop="description" content="Paper Dashboard Angular is a beautiful Bootstrap Admin Panel for your next project.">
+    <meta itemprop="image" content="http://s3.amazonaws.com/creativetim_bucket/products/58/original/opt_pd_angular_thumbnail.jpg">
+
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@creativetim">
+    <meta name="twitter:title" content="Paper Dashboard Angular by Creative Tim">
+    <meta name="twitter:description" content="Paper Dashboard Angular is a beautiful Bootstrap Admin Panel for your next project.">
+    <meta name="twitter:creator" content="@creativetim">
+    <meta name="twitter:image" content="http://s3.amazonaws.com/creativetim_bucket/products/58/original/opt_pd_angular_thumbnail.jpg">
+
+    <!-- Open Graph data -->
+    <meta property="fb:app_id" content="655968634437471">
+    <meta property="og:title" content="Paper Dashboard Angular by Creative Tim">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://demos.creative-tim.com/paper-dashboard-angular/">
+    <meta property="og:image" content="http://s3.amazonaws.com/creativetim_bucket/products/58/original/opt_pd_angular_thumbnail.jpg">
+    <meta property="og:description" content="Paper Dashboard Angular is a beautiful Bootstrap Admin Panel for your next project.">
+    <meta property="og:site_name" content="Creative Tim">
+
+    <!--  CSS for Demo Purpose, don't include it in your project     -->
+    <link href="./assets/css/demo.css" rel="stylesheet">
+
+    <!--     Fonts and icons     -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+
+
+    <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script src="https://connect.facebook.net/signals/plugins/inferredEvents.js?v=2.9.4" async=""></script><script src="https://connect.facebook.net/signals/config/111649226022273?v=2.9.4&amp;r=stable" async=""></script><script async="" src="//connect.facebook.net/en_US/fbevents.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-NKDMSK6"></script><script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NKDMSK6');</script>
+    <!-- End Google Tag Manager -->
+  <link rel="stylesheet" href="styles.7a972ce0605ecd36a2a0.css"><style></style><script charset="utf-8" src="1-es2015.56add76955764ba5fbd3.js"></script><script charset="utf-8" src="6-es2015.529b95d73d7297ef3030.js"></script><style>[_nghost-eir-c2]{display:inherit}</style><style type="text/css">/* Chart.js */
+/*
+ * DOM element rendering detection
+ * https://davidwalsh.name/detect-node-insertion
+ */
+@keyframes chartjs-render-animation {
+	from { opacity: 0.99; }
+	to { opacity: 1; }
+}
+
+.chartjs-render-monitor {
+	animation: chartjs-render-animation 0.001s;
+}
+
+/*
+ * DOM element resizing detection
+ * https://github.com/marcj/css-element-queries
+ */
+.chartjs-size-monitor,
+.chartjs-size-monitor-expand,
+.chartjs-size-monitor-shrink {
+	position: absolute;
+	direction: ltr;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	overflow: hidden;
+	pointer-events: none;
+	visibility: hidden;
+	z-index: -1;
+}
+
+.chartjs-size-monitor-expand > div {
+	position: absolute;
+	width: 1000000px;
+	height: 1000000px;
+	left: 0;
+	top: 0;
+}
+
+.chartjs-size-monitor-shrink > div {
+	position: absolute;
+	width: 200%;
+	height: 200%;
+	left: 0;
+	top: 0;
+}
+</style><style>.sb-button,   .sb-group{display:inline-flex;align-items:flex-start}  .sb-group{flex-wrap:wrap}  .sb-button{margin:.3125em}  .sb-wrapper{font-size:inherit;cursor:pointer;position:relative;outline:0;min-width:4.125em;height:2.5em;border:none;border-radius:1px;padding:0;line-height:2.571em;background-color:transparent}  .sb-wrapper .sb-count,   .sb-wrapper .sb-icon,   .sb-wrapper .sb-text{display:flex;align-items:center;justify-content:center;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}  .sb-wrapper .sb-inner{display:flex;flex:1;width:100%;height:100%}  .sb-wrapper .sb-content{display:flex;height:100%;width:100%}  .sb-wrapper .sb-text{padding:0 .7em;flex:1;height:100%;white-space:nowrap}  .sb-wrapper .sb-icon{text-align:center;width:100%;height:100%;font-size:1.2em;min-width:2em}  .sb-wrapper .sb-count{font-size:.9em;padding:0 .7em}  .sb-wrapper .sb-count,   .sb-wrapper .sb-text{font-weight:700}  .sb-show-text .sb-icon{width:2em}  .sb-show-count{min-width:5.333em}</style><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/38/5/common.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/38/5/util.js"></script></head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NKDMSK6"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <app-root _nghost-eir-c0="" ng-version="8.0.2"><router-outlet _ngcontent-eir-c0=""></router-outlet><app-admin-layout _nghost-eir-c1=""><div _ngcontent-eir-c1="" class="wrapper"><div _ngcontent-eir-c1="" class="sidebar" data-active-color="danger" data-color="white"><sidebar-cmp _ngcontent-eir-c1=""><div class="sidebar-wrapper"><div class="logo"><a class="simple-text logo-mini" href="http://www.creative-tim.com"><div class="logo-image-small"><img src="assets/img/angular2-logo.png"></div></a><a class="simple-text logo-normal" href="https://www.creative-tim.com"> Creative Tim </a></div><ul class="nav"><!----><li routerlinkactive="active" class="active"><a href="#/dashboard"><i class="nc-icon nc-bank"></i><p>Dashboard</p></a></li><li routerlinkactive="active" class=""><a href="#/icons"><i class="nc-icon nc-diamond"></i><p>Icons</p></a></li><li routerlinkactive="active" class=""><a href="#/maps"><i class="nc-icon nc-pin-3"></i><p>Maps</p></a></li><li routerlinkactive="active" class=""><a href="#/notifications"><i class="nc-icon nc-bell-55"></i><p>Notifications</p></a></li><li routerlinkactive="active" class=""><a href="#/user"><i class="nc-icon nc-single-02"></i><p>User Profile</p></a></li><li routerlinkactive="active" class=""><a href="#/table"><i class="nc-icon nc-tile-56"></i><p>Table List</p></a></li><li routerlinkactive="active" class=""><a href="#/typography"><i class="nc-icon nc-caps-small"></i><p>Typography</p></a></li><li routerlinkactive="active" class="active-pro"><a href="#/upgrade"><i class="nc-icon nc-spaceship"></i><p>Upgrade to PRO</p></a></li></ul></div></sidebar-cmp></div><div _ngcontent-eir-c1="" class="main-panel"><navbar-cmp _ngcontent-eir-c1=""><nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent"><div class="container-fluid"><div class="navbar-wrapper"><div class="navbar-toggle"><button class="navbar-toggler" type="button"><span class="navbar-toggler-bar bar1"></span><span class="navbar-toggler-bar bar2"></span><span class="navbar-toggler-bar bar3"></span></button></div><a class="navbar-brand" href="javascript:void(0)">Dashboard</a></div><button aria-controls="collapseExample" class="navbar-toggler" type="button" aria-expanded="false"><span class="navbar-toggler-bar navbar-kebab"></span><span class="navbar-toggler-bar navbar-kebab"></span><span class="navbar-toggler-bar navbar-kebab"></span></button><div class="collapse navbar-collapse justify-content-end" id="collapseExample"><form><div class="input-group no-border"><input class="form-control" placeholder="Search..." type="text" value=""><div class="input-group-append"><div class="input-group-text"><i class="nc-icon nc-zoom-split"></i></div></div></div></form><ul class="navbar-nav"><li class="nav-item"><a class="nav-link btn-magnify" href="javascript:void(0)"><i class="nc-icon nc-layout-11"></i><p><span class="d-lg-none d-md-block">Stats</span></p></a></li><li class="nav-item btn-rotate dropdown" ngbdropdown="" placement="bottom-left"><a aria-haspopup="true" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" ngbdropdowntoggle="" aria-expanded="false"><i class="nc-icon nc-bell-55"></i><p><span class="d-lg-none d-md-block">Some Actions</span></p></a><div aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu dropdown-menu-right" ngbdropdownmenu="" x-placement="bottom-left"><a class="dropdown-item" href="javascript:void(0)" ngbdropdownitem="">Action</a><a class="dropdown-item" href="javascript:void(0)" ngbdropdownitem="">Another action</a><a class="dropdown-item" href="javascript:void(0)" ngbdropdownitem="">Something else here</a></div></li><li class="nav-item"><a class="nav-link btn-rotate" href="javascript:void(0)"><i class="nc-icon nc-settings-gear-65"></i><p><span class="d-lg-none d-md-block">Account</span></p></a></li></ul></div></div></nav></navbar-cmp><div _ngcontent-eir-c1="" class="content"><router-outlet _ngcontent-eir-c1=""></router-outlet><dashboard-cmp><div class="row"><div class="col-lg-3 col-md-6 col-sm-6"><div class="card card-stats"><div class="card-body "><div class="row"><div class="col-5 col-md-4"><div class="icon-big text-center icon-warning"><i class="nc-icon nc-globe text-warning"></i></div></div><div class="col-7 col-md-8"><div class="numbers"><p class="card-category">Capacity</p><p class="card-title">150GB </p><p></p></div></div></div></div><div class="card-footer "><hr><div class="stats"><i class="fa fa-refresh"></i> Update Now </div></div></div></div><div class="col-lg-3 col-md-6 col-sm-6"><div class="card card-stats"><div class="card-body "><div class="row"><div class="col-5 col-md-4"><div class="icon-big text-center icon-warning"><i class="nc-icon nc-money-coins text-success"></i></div></div><div class="col-7 col-md-8"><div class="numbers"><p class="card-category">Revenue</p><p class="card-title">$ 1,345 </p><p></p></div></div></div></div><div class="card-footer "><hr><div class="stats"><i class="fa fa-calendar-o"></i> Last day </div></div></div></div><div class="col-lg-3 col-md-6 col-sm-6"><div class="card card-stats"><div class="card-body "><div class="row"><div class="col-5 col-md-4"><div class="icon-big text-center icon-warning"><i class="nc-icon nc-vector text-danger"></i></div></div><div class="col-7 col-md-8"><div class="numbers"><p class="card-category">Errors</p><p class="card-title">23 </p><p></p></div></div></div></div><div class="card-footer "><hr><div class="stats"><i class="fa fa-clock-o"></i> In the last hour </div></div></div></div><div class="col-lg-3 col-md-6 col-sm-6"><div class="card card-stats"><div class="card-body "><div class="row"><div class="col-5 col-md-4"><div class="icon-big text-center icon-warning"><i class="nc-icon nc-favourite-28 text-primary"></i></div></div><div class="col-7 col-md-8"><div class="numbers"><p class="card-category">Followers</p><p class="card-title">+45K </p><p></p></div></div></div></div><div class="card-footer "><hr><div class="stats"><i class="fa fa-refresh"></i> Update now </div></div></div></div></div><div class="row"><div class="col-md-12"><div class="card "><div class="card-header "><h5 class="card-title">Users Behavior</h5><p class="card-category">24 Hours performance</p></div><div class="card-body "><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div><canvas height="203" id="chartHours" width="818" style="display: block; height: 163px; width: 655px;" class="chartjs-render-monitor"></canvas></div><div class="card-footer "><hr><div class="stats"><i class="fa fa-history"></i> Updated 3 minutes ago </div></div></div></div></div><div class="row"><div class="col-md-4"><div class="card "><div class="card-header "><h5 class="card-title">Email Statistics</h5><p class="card-category">Last Campaign Performance</p></div><div class="card-body "><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div><canvas id="chartEmail" width="818" height="408" class="chartjs-render-monitor" style="display: block; height: 327px; width: 655px;"></canvas></div><div class="card-footer "><div class="legend"><i class="fa fa-circle text-primary"></i> Opened <i class="fa fa-circle text-warning"></i> Read <i class="fa fa-circle text-danger"></i> Deleted <i class="fa fa-circle text-gray"></i> Unopened </div><hr><div class="stats"><i class="fa fa-calendar"></i> Number of emails sent </div></div></div></div><div class="col-md-8"><div class="card card-chart"><div class="card-header"><h5 class="card-title">NASDAQ: AAPL</h5><p class="card-category">Line Chart with Points</p></div><div class="card-body"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div><canvas height="203" id="speedChart" width="818" class="chartjs-render-monitor" style="display: block; height: 163px; width: 655px;"></canvas></div><div class="card-footer"><div class="chart-legend"><i class="fa fa-circle text-info"></i> Tesla Model S <i class="fa fa-circle text-warning"></i> BMW 5 Series </div><hr><div class="card-stats"><i class="fa fa-check"></i> Data information certified </div></div></div></div></div></dashboard-cmp></div><footer-cmp _ngcontent-eir-c1=""><footer class="footer"><div class="container-fluid"><nav class="pull-left"><ul><li><a href="https://www.creative-tim.com"> Creative Tim </a></li><li><a href="http://blog.creative-tim.com"> Blog </a></li><li><a href="https://www.creative-tim.com/license"> Licenses </a></li></ul></nav><div class="copyright pull-right"> © 2019, made with <i class="fa fa-heart heart"></i> by <a href="https://www.creative-tim.com">Creative Tim</a></div></div></footer></footer-cmp></div></div><fixedplugin-cmp _ngcontent-eir-c1=""><div class="fixed-plugin"><div class="show-dropdown dropdown" ngbdropdown=""><a aria-haspopup="true" class="dropdown-toggle" href="javascript:void(0)" id="dropdownConfig" ngbdropdowntoggle="" aria-expanded="false"><i class="fa fa-cog fa-2x"></i></a><ul aria-labelledby="dropdownConfig" class="dropdown-menu" ngbdropdownmenu="" x-placement="bottom-left"><li class="header-title">Sidebar Background</li><li class="adjustments-line text-center"><a class="switch-trigger background-color" href="javascript:void(0)"><span class="badge filter badge-light active"></span><span class="badge filter badge-dark"></span></a></li><li class="header-title">Sidebar Active Color</li><li class="adjustments-line text-center"><a class="switch-trigger active-color" href="javascript:void(0)"><span class="badge filter badge-primary"></span><span class="badge filter badge-info"></span><span class="badge filter badge-success"></span><span class="badge filter badge-warning"></span><span class="badge filter badge-danger active"></span></a></li><li class="button-container"><div class=""><a class="btn btn-info btn-block btn-round" href="http://www.creative-tim.com/product/paper-dashboard-angular" target="_blank">Download for Free</a></div></li><li class="header-title">Want More Components?</li><li class="button-container"><div class=""><a class="btn btn-danger btn-block btn-round" href="http://www.creative-tim.com/product/paper-dashboard-pro-angular?ref=pd-free-upgrade-live" target="_blank">Get PRO Version!</a></div></li><li class="button-container"><div class=""><a class="btn btn-outline-default btn-block btn-round" routerlinkactive="active" href="#/documentation/tutorial">Documentation</a></div></li><li class="header-title">Thank you for sharing!</li><li class="button-container text-center"><share-buttons _nghost-eir-c2=""><!----><div _ngcontent-eir-c2="" class="sb-group sb-modern-dark"><!----><share-button _ngcontent-eir-c2="" _nghost-eir-c3="" class="sb-button sb-modern-dark"><button _ngcontent-eir-c3="" class="sb-wrapper sb-facebook sb-show-icon" aria-label="Share on Facebook" style="--button-color:#4267B2; font-size: 14px;"><div _ngcontent-eir-c3="" class="sb-inner"><div _ngcontent-eir-c3="" class="sb-content"><!----><div _ngcontent-eir-c3="" class="sb-icon"><fa-icon _ngcontent-eir-c3="" class="ng-fa-icon"><svg class="svg-inline--fa" viewBox="0 0 448 512"></svg><!--icon not found--></fa-icon></div><!----></div><!----></div></button></share-button><share-button _ngcontent-eir-c2="" _nghost-eir-c3="" class="sb-button sb-modern-dark"><button _ngcontent-eir-c3="" class="sb-wrapper sb-twitter sb-show-icon" aria-label="Share on Twitter" style="--button-color:#00acee; font-size: 14px;"><div _ngcontent-eir-c3="" class="sb-inner"><div _ngcontent-eir-c3="" class="sb-content"><!----><div _ngcontent-eir-c3="" class="sb-icon"><fa-icon _ngcontent-eir-c3="" class="ng-fa-icon"><svg class="svg-inline--fa" viewBox="0 0 448 512"></svg><!--icon not found--></fa-icon></div><!----></div><!----></div></button></share-button><div _ngcontent-eir-c2="" class="sb-button sb-modern-dark"><!----></div></div></share-buttons><br><br><span></span></li></ul></div></div></fixedplugin-cmp></app-admin-layout></app-root>
+
+
+
+<app-admin-layout _nghost-eir-c1="">
+    <div _ngcontent-eir-c1="" class="wrapper">
+        <div _ngcontent-eir-c1="" class="sidebar" data-active-color="danger" data-color="white">
+            <sidebar-cmp _ngcontent-eir-c1="">
+                <div class="sidebar-wrapper">
+                    <div class="logo">
+                        <a class="simple-text logo-mini" href="http://www.creative-tim.com">
+                            <div class="logo-image-small">
+                                <img src="assets/img/angular2-logo.png">
+                            </div>
+                        </a>
+                        <a class="simple-text logo-normal" href="https://www.creative-tim.com"> 
+                            Creative Tim </a></div><ul class="nav"><!---->
+                                <li routerlinkactive="active" class="active">
+                                    <a href="#/dashboard"><i class="nc-icon nc-bank"></i>
+                                        <p>Dashboard</p>
+                                    </a>
+                                </li>
+                                <li routerlinkactive="active" class="">
+                                    <a href="#/icons"><i class="nc-icon nc-diamond"></i>
+                                        <p>Icons</p>
+                                    </a>
+                                </li>
+                                <li routerlinkactive="active" class="">
+                                    <a href="#/maps"><i class="nc-icon nc-pin-3"></i>
+                                        <p>Maps</p>
+                                    </a>
+                                </li>
+                                <li routerlinkactive="active" class="">
+                                    <a href="#/notifications"><i class="nc-icon nc-bell-55"></i>
+                                        <p>Notifications</p>
+                                    </a>
+                                </li>
+                                <li routerlinkactive="active" class="">
+                                    <a href="#/user"><i class="nc-icon nc-single-02"></i>
+                                        <p>User Profile</p>
+                                    </a>
+                                </li>
+                                <li routerlinkactive="active" class="">
+                                    <a href="#/table"><i class="nc-icon nc-tile-56"></i>
+                                        <p>Table List</p>
+                                    </a>
+                                </li>
+                                <li routerlinkactive="active" class="">
+                                    <a href="#/typography"><i class="nc-icon nc-caps-small"></i>
+                                        <p>Typography</p>
+                                    </a>
+                                </li>
+                                <li routerlinkactive="active" class="active-pro">
+                                    <a href="#/upgrade"><i class="nc-icon nc-spaceship"></i>
+                                        <p>Upgrade to PRO</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </sidebar-cmp>
+                </div>
+                <div _ngcontent-eir-c1="" class="main-panel">
+                    <navbar-cmp _ngcontent-eir-c1="">
+                        <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent">
+                            <div class="container-fluid">
+                                <div class="navbar-wrapper">
+                                    <div class="navbar-toggle">
+                                        <button class="navbar-toggler" type="button">
+                                            <span class="navbar-toggler-bar bar1"></span>
+                                            <span class="navbar-toggler-bar bar2"></span>
+                                            <span class="navbar-toggler-bar bar3"></span>
+                                        </button>
+                                    </div>
+                                    <a class="navbar-brand" href="javascript:void(0)">Dashboard</a>
+                                </div>
+                                <button aria-controls="collapseExample" class="navbar-toggler" type="button" aria-expanded="false">
+                                    <span class="navbar-toggler-bar navbar-kebab"></span><span class="navbar-toggler-bar navbar-kebab"></span>
+                                    <span class="navbar-toggler-bar navbar-kebab"></span>
+                                </button>
+                                <div class="collapse navbar-collapse justify-content-end" id="collapseExample">
+                                    <form>
+                                        <div class="input-group no-border">
+                                            <input class="form-control" placeholder="Search..." type="text" value="">
+                                            <div class="input-group-append">
+                                                <div class="input-group-text">
+                                                    <i class="nc-icon nc-zoom-split"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <ul class="navbar-nav">
+                                        <li class="nav-item">
+                                            <a class="nav-link btn-magnify" href="javascript:void(0)">
+                                                <i class="nc-icon nc-layout-11"></i>
+                                                <p><span class="d-lg-none d-md-block">Stats</span></p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item btn-rotate dropdown" ngbdropdown="" placement="bottom-left">
+                                            <a aria-haspopup="true" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" ngbdropdowntoggle="" aria-expanded="false">
+                                                <i class="nc-icon nc-bell-55"></i><p><span class="d-lg-none d-md-block">Some Actions</span></p>
+                                            </a>
+                                            <div aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu dropdown-menu-right" ngbdropdownmenu="" x-placement="bottom-left">
+                                                <a class="dropdown-item" href="javascript:void(0)" ngbdropdownitem="">Action</a>
+                                                <a class="dropdown-item" href="javascript:void(0)" ngbdropdownitem="">Another action</a>
+                                                <a class="dropdown-item" href="javascript:void(0)" ngbdropdownitem="">Something else here</a>
+                                            </div>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link btn-rotate" href="javascript:void(0)">
+                                                <i class="nc-icon nc-settings-gear-65"></i>
+                                                <p><span class="d-lg-none d-md-block">Account</span></p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+                    </navbar-cmp>
+
+                    <div _ngcontent-eir-c1="" class="content">
+                        <router-outlet _ngcontent-eir-c1=""></router-outlet>
+                        <dashboard-cmp>
+                            <div class="row">
+                                <div class="col-lg-3 col-md-6 col-sm-6">
+                                    <div class="card card-stats">
+                                        <div class="card-body ">
+                                            <div class="row">
+                                                <div class="col-5 col-md-4">
+                                                    <div class="icon-big text-center icon-warning">
+                                                        <i class="nc-icon nc-globe text-warning"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="col-7 col-md-8">
+                                                    <div class="numbers">
+                                                        <p class="card-category">Capacity</p>
+                                                        <p class="card-title">150GB </p>
+                                                        <p></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer "><hr>
+                                            <div class="stats">
+                                                <i class="fa fa-refresh"></i> Update Now 
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-sm-6">
+                                    <div class="card card-stats">
+                                        <div class="card-body ">
+                                            <div class="row">
+                                                <div class="col-5 col-md-4">
+                                                    <div class="icon-big text-center icon-warning">
+                                                        <i class="nc-icon nc-money-coins text-success"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="col-7 col-md-8">
+                                                    <div class="numbers">
+                                                        <p class="card-category">Revenue</p>
+                                                        <p class="card-title">$ 1,345 </p>
+                                                        <p></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer "><hr>
+                                            <div class="stats">
+                                                <i class="fa fa-calendar-o"></i> Last day 
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-sm-6">
+                                    <div class="card card-stats">
+                                        <div class="card-body ">
+                                            <div class="row">
+                                                <div class="col-5 col-md-4">
+                                                    <div class="icon-big text-center icon-warning">
+                                                        <i class="nc-icon nc-vector text-danger"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="col-7 col-md-8">
+                                                    <div class="numbers">
+                                                        <p class="card-category">Errors</p>
+                                                        <p class="card-title">23 </p>
+                                                        <p></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer "><hr>
+                                            <div class="stats">
+                                                <i class="fa fa-clock-o"></i> In the last hour 
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-sm-6">
+                                    <div class="card card-stats">
+                                        <div class="card-body ">
+                                            <div class="row">
+                                                <div class="col-5 col-md-4">
+                                                    <div class="icon-big text-center icon-warning">
+                                                        <i class="nc-icon nc-favourite-28 text-primary"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="col-7 col-md-8">
+                                                    <div class="numbers">
+                                                        <p class="card-category">Followers</p>
+                                                        <p class="card-title">+45K </p>
+                                                        <p></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer "><hr>
+                                            <div class="stats">
+                                                <i class="fa fa-refresh"></i> Update now 
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="card ">
+                                        <div class="card-header ">
+                                            <h5 class="card-title">Users Behavior</h5>
+                                            <p class="card-category">24 Hours performance</p>
+                                        </div><div class="card-body ">
+                                            <div class="chartjs-size-monitor">
+                                                <div class="chartjs-size-monitor-expand">
+                                                    <div class=""></div>
+                                                </div>
+                                                <div class="chartjs-size-monitor-shrink">
+                                                    <div class=""></div>
+                                                </div>
+                                            </div>
+                                            <canvas height="203" id="chartHours" width="818" style="display: block; height: 163px; width: 655px;" class="chartjs-render-monitor"></canvas>
+                                        </div>
+                                        <div class="card-footer "><hr>
+                                            <div class="stats">
+                                                <i class="fa fa-history"></i> Updated 3 minutes ago 
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="card ">
+                                        <div class="card-header ">
+                                            <h5 class="card-title">Email Statistics</h5>
+                                            <p class="card-category">Last Campaign Performance</p>
+                                        </div>
+                                        <div class="card-body ">
+                                            <div class="chartjs-size-monitor">
+                                                <div class="chartjs-size-monitor-expand">
+                                                    <div class=""></div>
+                                                </div>
+                                                <div class="chartjs-size-monitor-shrink">
+                                                    <div class=""></div>
+                                                </div>
+                                            </div>
+                                            <canvas id="chartEmail" width="818" height="408" class="chartjs-render-monitor" style="display: block; height: 327px; width: 655px;"></canvas>
+                                        </div>
+                                        <div class="card-footer ">
+                                            <div class="legend">
+                                                <i class="fa fa-circle text-primary"></i> Opened 
+                                                <i class="fa fa-circle text-warning"></i> Read 
+                                                <i class="fa fa-circle text-danger"></i> Deleted 
+                                                <i class="fa fa-circle text-gray"></i> Unopened 
+                                            </div>
+                                            <hr>
+                                            <div class="stats">
+                                                <i class="fa fa-calendar"></i> Number of emails sent 
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card card-chart">
+                                        <div class="card-header">
+                                            <h5 class="card-title">NASDAQ: AAPL</h5>
+                                            <p class="card-category">Line Chart with Points</p>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="chartjs-size-monitor">
+                                                <div class="chartjs-size-monitor-expand">
+                                                    <div class=""></div>
+                                                </div>
+                                                <div class="chartjs-size-monitor-shrink">
+                                                    <div class=""></div>
+                                                </div>
+                                            </div>
+                                            <canvas height="203" id="speedChart" width="818" class="chartjs-render-monitor" style="display: block; height: 163px; width: 655px;"></canvas>
+                                        </div>
+                                        <div class="card-footer">
+                                            <div class="chart-legend">
+                                                <i class="fa fa-circle text-info"></i> Tesla Model S 
+                                                <i class="fa fa-circle text-warning"></i> BMW 5 Series 
+                                            </div>
+                                            <hr>
+                                            <div class="card-stats">
+                                                <i class="fa fa-check"></i> Data information certified 
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </dashboard-cmp>
+                    </div>
+                    <footer-cmp _ngcontent-eir-c1="">
+                        <footer class="footer">
+                            <div class="container-fluid">
+                                <nav class="pull-left">
+                                    <ul>
+                                        <li><a href="https://www.creative-tim.com"> Creative Tim </a></li>
+                                        <li><a href="http://blog.creative-tim.com"> Blog </a></li>
+                                        <li><a href="https://www.creative-tim.com/license"> Licenses </a></li>
+                                    </ul>
+                                </nav>
+                                <div class="copyright pull-right"> 
+                                    © 2019, made with 
+                                    <i class="fa fa-heart heart"></i> 
+                                    by 
+                                    <a href="https://www.creative-tim.com">Creative Tim</a>
+                                </div>
+                            </div>
+                        </footer>
+                    </footer-cmp>
+                </div>
+            </div>
+            <fixedplugin-cmp _ngcontent-eir-c1="">
+                <div class="fixed-plugin">
+                    <div class="show-dropdown dropdown" ngbdropdown="">
+                        <a aria-haspopup="true" class="dropdown-toggle" href="javascript:void(0)" id="dropdownConfig" ngbdropdowntoggle="" aria-expanded="false">
+                            <i class="fa fa-cog fa-2x"></i>
+                        </a>
+                        <ul aria-labelledby="dropdownConfig" class="dropdown-menu" ngbdropdownmenu="" x-placement="bottom-left">
+                            <li class="header-title">Sidebar Background</li>
+                            <li class="adjustments-line text-center">
+                                <a class="switch-trigger background-color" href="javascript:void(0)">
+                                    <span class="badge filter badge-light active"></span>
+                                    <span class="badge filter badge-dark"></span>
+                                </a>
+                            </li>
+                            <li class="header-title">Sidebar Active Color</li>
+                            <li class="adjustments-line text-center">
+                                <a class="switch-trigger active-color" href="javascript:void(0)">
+                                    <span class="badge filter badge-primary"></span>
+                                    <span class="badge filter badge-info"></span>
+                                    <span class="badge filter badge-success"></span>
+                                    <span class="badge filter badge-warning"></span>
+                                    <span class="badge filter badge-danger active"></span>
+                                </a>
+                            </li>
+                            <li class="button-container">
+                                <div class="">
+                                    <a class="btn btn-info btn-block btn-round" href="http://www.creative-tim.com/product/paper-dashboard-angular" target="_blank">
+                                        Download for Free
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="header-title">Want More Components?</li>
+                            <li class="button-container">
+                                <div class="">
+                                    <a class="btn btn-danger btn-block btn-round" href="http://www.creative-tim.com/product/paper-dashboard-pro-angular?ref=pd-free-upgrade-live" target="_blank">
+                                        Get PRO Version!
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="button-container">
+                                <div class="">
+                                    <a class="btn btn-outline-default btn-block btn-round" routerlinkactive="active" href="#/documentation/tutorial">
+                                        Documentation
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="header-title">
+                                Thank you for sharing!
+                            </li>
+                            <li class="button-container text-center">
+                                <share-buttons _nghost-eir-c2="">
+                                    <!---->
+                                    <div _ngcontent-eir-c2="" class="sb-group sb-modern-dark">
+                                        <!---->
+                                        <share-button _ngcontent-eir-c2="" _nghost-eir-c3="" class="sb-button sb-modern-dark">
+                                            <button _ngcontent-eir-c3="" class="sb-wrapper sb-facebook sb-show-icon" aria-label="Share on Facebook" style="--button-color:#4267B2; font-size: 14px;">
+                                                <div _ngcontent-eir-c3="" class="sb-inner">
+                                                    <div _ngcontent-eir-c3="" class="sb-content"><!---->
+                                                        <div _ngcontent-eir-c3="" class="sb-icon">
+                                                            <fa-icon _ngcontent-eir-c3="" class="ng-fa-icon">
+                                                                <svg class="svg-inline--fa" viewBox="0 0 448 512"></svg>
+                                                                <!--icon not found-->
+                                                            </fa-icon>
+                                                        </div><!---->
+                                                    </div><!---->
+                                                </div>
+                                            </button>
+                                        </share-button>
+                                        <share-button _ngcontent-eir-c2="" _nghost-eir-c3="" class="sb-button sb-modern-dark"></share-button>
+                                        <button _ngcontent-eir-c3="" class="sb-wrapper sb-twitter sb-show-icon" aria-label="Share on Twitter" style="--button-color:#00acee; font-size: 14px;">
+                                            <div _ngcontent-eir-c3="" class="sb-inner">
+                                                <div _ngcontent-eir-c3="" class="sb-content">
+                                                    <!----><div _ngcontent-eir-c3="" class="sb-icon">
+                                                        <fa-icon _ngcontent-eir-c3="" class="ng-fa-icon">
+                                                            <svg class="svg-inline--fa" viewBox="0 0 448 512"></svg>
+                                                            <!--icon not found-->
+                                                        </fa-icon>
+                                                    </div><!---->
+                                                </div><!---->
+                                            </div>
+                                        </button>
+                                    </share-button>
+                                    <div _ngcontent-eir-c2="" class="sb-button sb-modern-dark"><!---->
+                                    </div>
+                                </div>
+                            </share-buttons>
+                            <br><br>
+                            <span></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </fixedplugin-cmp>
+    </app-admin-layout>
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.6/holder.min.js" id="holder-id"></script>
+    <script>
+        // Facebook Pixel Code Don't Delete
+        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+        n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+        document,'script','//connect.facebook.net/en_US/fbevents.js');
+
+        try{
+        fbq('init', '111649226022273');
+        fbq('track', "PageView");
+
+        }catch(err) {
+        console.log('Facebook Track Error:', err);
+        }
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=111649226022273&ev=PageView&noscript=1"
+        />
+    </noscript>
+    <script src="runtime-es2015.e491438d7d719e778777.js" type="module"></script><script src="polyfills-es2015.d7a21fb2b7f49c71b1b3.js" type="module"></script><script src="runtime-es5.75b9bf4b5612e2d02d14.js" nomodule=""></script><script src="polyfills-es5.e516046b6e897c48051a.js" nomodule=""></script><script src="main-es2015.d4a337d6c45a09046b32.js" type="module"></script><script src="main-es5.7a28c99fb41108c62699.js" nomodule=""></script>
+
+
+
+</body>
+
+</html>

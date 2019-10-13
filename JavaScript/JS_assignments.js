@@ -26,7 +26,7 @@ function countLetter(string, ch) {
 }
 
 //  Function to check if the two strings entered in text boxes are Anagrams of each other
- function checkIfAnagram() {
+function checkIfAnagram() {
     
     let str1 = document.getElementById('asgn_str_01').value;
     let str2 = document.getElementById('asgn_str_02').value;
@@ -290,6 +290,101 @@ function resetFizzBuzz() {
     document.getElementById('asgn_05_response').style.visibility ="hidden";
 }
 
+// Function to check if the string entered is a Palindrome
+function checkIfPalindrome() {
+    
+    let strpalindrome = document.getElementById('asgn_06_str_01').value;
+
+    if(strpalindrome == null || strpalindrome.trim() == '')
+    {
+        document.getElementById('asgn_06_response').innerText = "Empty string found! Please enter a string value and then click on submit."
+        document.getElementById('asgn_06_response').style.display ="block";
+        return;
+    }
+    else
+    {
+        strpalindrome = strpalindrome.trim().toLowerCase();
+    }
+
+    const reversestr = strpalindrome.split('').reverse().join('');
+
+    if(reversestr == strpalindrome) {
+        document.getElementById('asgn_06_response').innerText = "TRUE : The given string is a Palindrome!";
+        document.getElementById('asgn_06_response').style.display ="block";
+    }
+    else{
+        document.getElementById('asgn_06_response').innerText = "FALSE : The given string is a not a Palindrome!";
+        document.getElementById('asgn_06_response').style.display ="block";
+    }
+}
+
+// Function to reset text boxes to empty values & make result div as hidden
+function resetPalindrome() {
+    document.getElementById('asgn_06_str_01').value = "";
+    document.getElementById('asgn_06_response').innerText = "";
+    document.getElementById('asgn_06_response').style.display ="none";
+}
+
+// Function to count the number of vowels in a given string
+function countVowels() {
+    
+    let strVowel = document.getElementById('asgn_07_str_01').value;
+
+    if(strVowel == null || strVowel.trim() == '')
+    {
+        document.getElementById('asgn_07_response').innerText = "Empty string found! Please enter a string value and then click on submit."
+        document.getElementById('asgn_07_response').style.display ="block";
+        return;
+    }
+    else
+    {
+        strVowel = strVowel.trim().toLowerCase();
+    }
+
+    const vowelsinstr = strVowel.match(/[aeiou]/g);
+    const vowelCount= vowelsinstr.length;
+
+    document.getElementById('asgn_07_response').innerText = "The number of vowels in the given string :: " + vowelCount;
+    document.getElementById('asgn_07_response').style.display ="block";
+    
+}
+
+// Function to reset text boxes to empty values & make result div as hidden
+function resetVowels() {
+    document.getElementById('asgn_07_str_01').value = "";
+    document.getElementById('asgn_07_response').innerText = "";
+    document.getElementById('asgn_07_response').style.display ="none";
+}
+
+// Function to reverse the given String
+function reverseString() {
+    
+    let str1 = document.getElementById('asgn_08_str_01').value;
+
+    if(str1 == null || str1.trim() == '')
+    {
+        document.getElementById('asgn_08_response').innerText = "Empty string found! Please enter a string value and then click on submit."
+        document.getElementById('asgn_08_response').style.display ="block";
+        return;
+    }
+    else
+    {
+        str1 = str1.trim();
+    }
+
+    const reversestr = str1.split('').reverse().join('');
+
+    document.getElementById('asgn_08_response').innerText = "Reverse of String : " + reversestr;
+    document.getElementById('asgn_08_response').style.display ="block";
+}
+
+// Function to reset text boxes to empty values & make result div as hidden
+function resetReverseString() {
+    document.getElementById('asgn_08_str_01').value = "";
+    document.getElementById('asgn_08_response').innerText = "";
+    document.getElementById('asgn_08_response').style.display ="none";
+}
+
 //Event Handlers for Assignment 01 Submit & Reset buttons
 console.log('Starting Console log in JS_assignments.js!!');
 const anagram_sbmt_btn = document.querySelector('#asgn_01_sbmt');
@@ -364,5 +459,50 @@ const fzbz_reset_btn = document.querySelector('#asgn_05_reset');
 fzbz_reset_btn.addEventListener('click', e=> {
     e.preventDefault();
     resetFizzBuzz();
+})
+
+//Event Handlers for Assignment 06 Submit & Reset buttons
+const palindrome_sbmt_btn = document.querySelector('#asgn_06_sbmt');
+
+palindrome_sbmt_btn.addEventListener('click', e=> {
+    e.preventDefault();
+    checkIfPalindrome();
+})
+
+const palindrome_reset_btn = document.querySelector('#asgn_06_reset');
+
+palindrome_reset_btn.addEventListener('click', e=> {
+    e.preventDefault();
+    resetPalindrome();
+})
+
+//Event Handlers for Assignment 07 Submit & Reset buttons
+const vowel_sbmt_btn = document.querySelector('#asgn_07_sbmt');
+
+vowel_sbmt_btn.addEventListener('click', e=> {
+    e.preventDefault();
+    countVowels();
+})
+
+const vowel_reset_btn = document.querySelector('#asgn_07_reset');
+
+vowel_reset_btn.addEventListener('click', e=> {
+    e.preventDefault();
+    resetVowels();
+})
+
+//Event Handlers for Assignment 08 Submit & Reset buttons
+const reversestr_sbmt_btn = document.querySelector('#asgn_08_sbmt');
+
+reversestr_sbmt_btn.addEventListener('click', e=> {
+    e.preventDefault();
+    reverseString();
+})
+
+const reversestr_reset_btn = document.querySelector('#asgn_08_reset');
+
+reversestr_reset_btn.addEventListener('click', e=> {
+    e.preventDefault();
+    resetReverseString();
 })
 
